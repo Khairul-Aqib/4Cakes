@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>4CakesInACup — Menu</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-top">
+    <div class="logo-placeholder" aria-label="Logo placeholder">4C</div>
+    <div class="brand-text">
+      <h1>4Cakes<span class="accent">InACup</span></h1>
+      <p class="tagline">Handcrafted cakes &amp; desserts, made to order</p>
+    </div>
+  </div>
+
+  <div class="search-wrap">
+    <span class="search-icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="11" cy="11" r="7"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+    </span>
+    <input id="searchInput" type="text" placeholder="Search the menu... e.g. chocolate, strawberries, cheesecake" autocomplete="off" />
+  </div>
+
+  <nav class="category-nav" id="categoryNav" aria-label="Menu categories"></nav>
+</header>
+
+<main id="menu"></main>
+
+<p id="noResults" class="no-results hidden">No items match your search. Try a different keyword.</p>
+
+<footer class="site-footer">
+  <p>4CakesInACup — logo and product photos coming soon.</p>
+  <p class="footer-note">Prices as per pricelist dated 30th July 2026. All cakes made to order.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
