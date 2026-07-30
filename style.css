@@ -70,10 +70,46 @@ html, body {
   color: var(--ink);
 }
 
+.header-contact {
+  margin-left: auto;
+  flex: 0 0 auto;
+  display: flex;
+  gap: 8px;
+}
+
+.header-contact-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid var(--border-strong);
+  background: var(--card-bg);
+  color: var(--red);
+  box-shadow: 0 1px 2px rgba(42, 37, 35, 0.05);
+  transition: all 0.15s;
+}
+
+.header-contact-icon:hover {
+  border-color: var(--red);
+  background: var(--red-tint);
+  box-shadow: 0 2px 6px rgba(214, 41, 59, 0.15);
+}
+
 .tagline {
   margin: 2px 0 0;
   font-size: 13px;
   color: var(--ink-soft);
+}
+
+.slogan {
+  margin: 4px 0 0;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--red);
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
 }
 
 .search-wrap {
@@ -317,6 +353,135 @@ html, body {
   color: var(--red);
 }
 
+/* ---------- Custom cake banner ---------- */
+
+.custom-cake-banner {
+  max-width: 1280px;
+  margin: 28px auto 0;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background: var(--red-tint);
+  border: 1px solid var(--red-tint-2);
+  border-radius: var(--radius);
+}
+
+.custom-cake-text h2 {
+  margin: 0 0 4px;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.custom-cake-text p {
+  margin: 0;
+  font-size: 13px;
+  color: var(--ink-soft);
+  max-width: 46ch;
+}
+
+.btn-whatsapp {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--red);
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 12px 20px;
+  border-radius: 999px;
+  white-space: nowrap;
+  box-shadow: 0 2px 6px rgba(214, 41, 59, 0.25);
+  transition: background 0.15s, box-shadow 0.15s;
+}
+
+.btn-whatsapp:hover {
+  background: var(--red-dark);
+  box-shadow: 0 4px 12px rgba(214, 41, 59, 0.32);
+}
+
+/* ---------- Contact section ---------- */
+
+.contact-section {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 8px 24px 40px;
+  text-align: center;
+}
+
+.contact-section h2 {
+  margin: 0 0 4px;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.contact-intro {
+  margin: 0 0 20px;
+  font-size: 13px;
+  color: var(--ink-soft);
+}
+
+.contact-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 220px;
+  padding: 14px 20px;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  background: var(--card-bg);
+  color: var(--ink);
+  text-decoration: none;
+  text-align: left;
+  box-shadow: 0 1px 2px rgba(42, 37, 35, 0.05);
+  transition: all 0.15s;
+}
+
+.contact-card:hover {
+  border-color: var(--red);
+  box-shadow: 0 4px 12px rgba(214, 41, 59, 0.12);
+}
+
+.contact-card .icon-whatsapp,
+.contact-card .icon-instagram {
+  flex: 0 0 auto;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--red-tint);
+  color: var(--red);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-card-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 13px;
+}
+
+.contact-card-text strong {
+  font-size: 14px;
+}
+
+.contact-card-text span {
+  color: var(--ink-soft);
+}
+
 /* ---------- Footer ---------- */
 
 .site-footer {
@@ -337,6 +502,52 @@ html, body {
 }
 
 @media (max-width: 480px) {
-  .brand-text h1 { font-size: 20px; }
-  .product-grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
+  .site-header {
+    padding: 14px 20px 0;
+  }
+
+  .header-top {
+    flex-wrap: wrap;
+    gap: 8px 12px;
+  }
+
+  .logo-placeholder {
+    width: 40px;
+    height: 40px;
+    font-size: 14px;
+  }
+
+  .brand-text {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  .brand-text h1 { font-size: 17px; }
+
+  .tagline { font-size: 11px; }
+
+  .slogan { font-size: 9px; margin-top: 2px; }
+
+  .header-contact {
+    flex-basis: 100%;
+    justify-content: flex-end;
+    margin-left: 0;
+    margin-top: -6px;
+  }
+
+  .header-contact-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .search-wrap { margin-top: 10px; }
+
+  .category-nav { margin-top: 8px; padding-bottom: 10px; }
+
+  #menu { padding-top: 20px; }
+
+  .product-grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 14px; }
+  .custom-cake-banner { flex-direction: column; align-items: stretch; text-align: center; }
+  .btn-whatsapp { justify-content: center; }
+  .contact-card { min-width: 0; width: 100%; }
 }
